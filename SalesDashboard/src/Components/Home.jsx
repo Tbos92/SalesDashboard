@@ -134,15 +134,14 @@ function Dashboard() {
         </Grid>
 
         {/* Recent Transactions rendered from mockData.js */}
-        <Grid item xs={12}>
-          <Paper elevation={3} style={{ padding: "16px" }}>
+        <Grid item xs={4}>
+          <Paper elevation={3} style={{ padding: "16px", height: "200px", overflowY: "auto" }}>
             <Typography variant="h6">Recent Transactions</Typography>
             <Box mt={2}>
               {transactions.map((transaction, index) => (
                 <Box mb={1} key={index}>
                   <Typography variant="body2">
-                    {transaction.txId} - {transaction.user} - {transaction.date}{" "}
-                    - ${transaction.cost}
+                    {transaction.txId} - {transaction.user} - {transaction.date} - ${transaction.cost}
                   </Typography>
                 </Box>
               ))}
